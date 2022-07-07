@@ -13,15 +13,16 @@ class Persona {
       $this->horas=$h;
       $this->pesos=$p;
     }
+    public function multiplicar(){
+      $mult = $this->horas * $this->pesos;
+      return $mult;
+  }
     public function imprimir()
     {
         echo 'El nombre de la persona es: ';
         echo $this->nombre;
         echo '<br>';
-    }
-    public function multiplicar(){
-        $mult = $this->horas * $this->pesos;
-        echo "Cobra un total de: $mult pesos";
+        echo "Cobra un total de: ". $this->multiplicar() ." pesos";
     }
   }
   
